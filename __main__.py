@@ -14,12 +14,16 @@ def loop(device):
                 shot.screen_shot(adb, device, config.save_path, config.delete_shot)
             elif user_answer == 'n':
                 exit(0)
+            else:
+                print("无法识别你的答案,请重新输入!")
         elif user_answer == "2":
             user_answer = input("是否需要录屏 y/n：\n")
             if user_answer == 'y':
                 record.screen_record(adb, device, config.save_path, config.delete_record)
             elif user_answer == 'n':
                 exit(0)
+            else:
+                print("无法识别你的答案,请重新输入!")
         else:
             print("无法识别你的答案,请重新输入!")
         pass
